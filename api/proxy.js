@@ -10,7 +10,7 @@ export default async function handler(request, response) {
         return response.status(200).end();
     }
 
-    const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+    const GOOGLE_API_KEY = process.env.GOOGLE_AI_API_KEY;
     if (!GOOGLE_API_KEY) {
         return response.status(500).json({ error: 'API key is not configured.' });
     }
