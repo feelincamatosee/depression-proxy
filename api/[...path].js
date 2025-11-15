@@ -1,4 +1,4 @@
-module.exports = async function handler(request, response) {
+export default async function handler(request, response) {
     const allowedOrigins = [
         'https://feelincamatosee.github.io',
         'http://localhost:5173'
