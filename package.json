@@ -2,7 +2,6 @@
   "name": "depression-proxy",
   "version": "1.0.0",
   "description": "Proxy for Google AI",
-  "main": "api/[...path].js",
   "type": "module",
   "scripts": {
     "start": "echo 'Deploy to Vercel'"
