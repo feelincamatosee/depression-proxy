@@ -1,13 +1,12 @@
 module.exports = async function handler(request, response) {
-    response.setHeader(
-        "Access-Control-Allow-Origin",
-        "https://feelincamatosee.github.io"
-    );
-    response.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-    response.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    const allowedOrigins = [
+        'https://feelincamatosee.github.io',
+        'http://localhost:5173'
+    ];
 
-    if (request.method === 'OPTIONS') {
-        return response.status(200).end();
+    const origin = request.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+        response.setHeader('Access-Control-Allow-Origin', origin);
     }
 
     const GOOGLE_API_KEY = process.env.GOOGLE_AI_API_KEY;
