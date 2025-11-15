@@ -1,4 +1,4 @@
-export default async function handler(request, response) {
+module.exports = async function handler(request, response) {
     response.setHeader(
         "Access-Control-Allow-Origin",
         "https://feelincamatosee.github.io"
